@@ -15,22 +15,7 @@ module.exports = function(grunt) {
             }
         }
     },
-    //setup files from vendor that need to be copied to appropriate directory
-    copy:{
-    	main: {
-    		files: [
-    					{	
-    						expand: true
-    						,cwd: 'vendor/fontawesome/fonts/'
-    						,src: '**'
-    						,dest: 'app/assets/fonts/'
-    						,flatten:true
-    						,filter: 'isFile'
-    					 }	
-    		]
-    	}
-    }
-    ,concat: {
+    concat: {
       options: {
         separator: ';',
       },
@@ -91,7 +76,6 @@ module.exports = function(grunt) {
   //grunt.loadNpmTasks('grunt-phpunit');
 
   // Task definition
-  //grunt.registerTask('default', ['watch']);
-  grunt.registerTask('default', ['less', 'concat', 'uglify', 'copy', 'watch']);
+  grunt.registerTask('default', ['watch']);
 
 };
