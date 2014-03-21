@@ -1,0 +1,4 @@
+//frontend.js
+function test(){
+	
+}
